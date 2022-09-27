@@ -1,0 +1,41 @@
+/* 
+|=================================
+|     features 
+|=================================
+*/
+
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  flex-basis: calc((100% - 30px) / 4);
+}
+
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features__thumb {
+  @include flex-center;
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+
+  background-color: var(--btn-bg-cl);
+}

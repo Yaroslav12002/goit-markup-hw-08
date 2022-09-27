@@ -1,0 +1,32 @@
+/* 
+|=================================
+|     clients 
+|=================================
+*/
+.clients-list {
+  @include flex-center(true, false);
+  gap: 30px;
+}
+
+.clients-list__link {
+  display: block;
+  border: 1px solid var(--light-ico-cl);
+  border-radius: 4px;
+  fill: var(--light-ico-cl);
+
+  transition: fill var(--animation-effect-duration) var(--animation-effect-cubic),
+    border-color var(--animation-effect-duration) var(--animation-effect-cubic);
+
+  &:hover,
+  &:focus {
+    fill: var(--blue-cl);
+    border-color: var(--blue-cl);
+    outline: none;
+  }
+}
+
+.clients-list__thumb {
+  @include flex-center;
+  height: 92px;
+  width: 170px;
+}

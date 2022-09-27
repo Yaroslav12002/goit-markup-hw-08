@@ -1,0 +1,11 @@
+@mixin flex-center($jc: true, $ai: true) {
+  /* mixin start */
+  display: flex;
+  @if $jc {
+    justify-content: center;
+  }
+  @if $ai {
+    align-items: center;
+  }
+  /* mixin end */
+}

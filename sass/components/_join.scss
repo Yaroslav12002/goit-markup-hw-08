@@ -1,0 +1,35 @@
+.join {
+  display: flex;
+  gap: 12px;
+}
+
+.join__mail {
+  padding: 15px;
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: border-color var(--animation-effect-duration) var(--animation-effect-cubic);
+
+  &:focus {
+    border-color: var(--blue-cl);
+  }
+}
+
+.join__button {
+  @include flex-center;
+  gap: 10px;
+  padding: 10px 29px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hero-btn-accent-cl);
+  }
+}

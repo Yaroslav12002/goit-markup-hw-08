@@ -1,0 +1,29 @@
+:root {
+  /* text colors */
+  --main-cl: #757575;
+  --header-cl: #212121;
+  --black-cl: #000;
+  --white-cl: #fff;
+  --blue-cl: #2196f3;
+  --white-alfa-cl: #fff9;
+
+  /* background colors */
+  --footer-bg-cl: #2f303a;
+  --btn-bg-cl: #f5f4fa;
+  --hero-btn-accent-cl: #188ce8;
+  --blue-bg-cl: #2196f3;
+  --white-bg-cl: #fff;
+  --overlay-bg-cl-08: rgba(47, 48, 58, 0.8);
+  --overlay-text-bg-cl: rgba(33, 150, 243, 0.9);
+
+  /* others */
+  --light-ico-cl: #afb1b8;
+  --dark-ico-cl: rgba(255, 255, 255, 0.1);
+  --header-border-cl: #ececec;
+  --label-border-cl: #eee;
+  --hero-btn-shadow-cl: rgba(0, 0, 0, 0.15);
+  --hero-overlay-cl: rgba(47, 48, 58, 0.4);
+  --modal-overlay-cl: rgba(0, 0, 0, 0.2);
+  --animation-effect-duration: 250ms;
+  --animation-effect-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
