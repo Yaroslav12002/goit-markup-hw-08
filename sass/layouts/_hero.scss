@@ -5,14 +5,16 @@
  */
 
 .hero {
-  text-align: center;
-  height: 600px;
+  // desktop height: 600px;
   max-width: 1600px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: var(--footer-bg-cl);
+  @include section(118px, 118px, var(--footer-bg-cl));
+  @media screen and (min-width: $desktop) {
+    @include section(200px, 200px, var(--footer-bg-cl));
+  }
+  text-align: center;
   background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)),
     url('../images/hero-bg.jpg');
   background-repeat: no-repeat;
@@ -22,15 +24,17 @@
 
 .hero__title {
   margin-bottom: 30px;
-  width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--white-cl);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
+
+  @include font(26px, 900, 1.62, 0.06em, var(--white-cl));
+  @media screen and (min-width: $desktop) {
+    @include font(44px, 900, 1.36, 0.06em, var(--white-cl));
+    max-width: 696px;
+  }
 }
 
 .hero__button {

@@ -1,5 +1,11 @@
 .contacts {
-  display: flex;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
   margin-left: auto;
 
   color: var(--main-cl);
@@ -10,11 +16,20 @@
 }
 
 .contacts__link {
-  @include flex-center(false, true);
+  @include flex(null, center);
   color: var(--main-cl);
-  padding-top: 32px;
-  padding-bottom: 32px;
 
+  &--padding-top {
+    padding-top: 21px;
+  }
+  &--padding-bottom {
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   transition: color var(--animation-effect-duration) var(--animation-effect-cubic);
 
   &:hover,
@@ -24,7 +39,14 @@
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
 }
 
 .contacts__icons-mail {

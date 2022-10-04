@@ -5,12 +5,19 @@
 */
 
 .site-nav {
-  @include flex-center(false, true);
+  display: none;
+  @media screen and (min-width: $tablet) {
+    @include flex(null, center);
+  }
 }
 
 .site-nav__list {
   display: flex;
-  margin-left: 93px;
+
+  margin-left: 88px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 
   color: var(--header-cl);
   font-weight: 500;

@@ -4,14 +4,13 @@
 }
 
 .form__title {
-  @include flex-center(true, false);
+  display: block;
   margin-bottom: 12px;
-
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: var(--header-cl);
+  @include font(20px, 700, 1.5, 0.03em, var(--header-cl));
+  @media screen and (min-width: $desktop) {
+    @include font(20px, 700, 1.15, 0.03em, var(--header-cl));
+  }
+  text-align: center;
 }
 
 .form__field {

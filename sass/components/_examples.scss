@@ -5,16 +5,24 @@
 */
 
 .examples {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .examples__item {
-  width: calc(100% / 3 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc(100% / 3 - var(--gap));
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .examples__text {
@@ -87,4 +95,8 @@
   .examples__link:focus & {
     transform: translateY(0);
   }
+}
+
+.examples__img {
+  width: 100%;
 }

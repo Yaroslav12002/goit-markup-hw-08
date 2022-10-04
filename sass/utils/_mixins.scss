@@ -1,11 +1,35 @@
-@mixin flex-center($jc: true, $ai: true) {
-  /* mixin start */
+@import './decimals';
+
+@mixin font($fs, $fw, $lh, $ls, $fc) {
+  /* mixin font start */
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $fc;
+  /* mixin font end */
+}
+
+@mixin flex($jc: center, $ai: center) {
+  /* mixin flex start */
   display: flex;
-  @if $jc {
-    justify-content: center;
-  }
-  @if $ai {
-    align-items: center;
-  }
-  /* mixin end */
+  justify-content: $jc;
+  align-items: $ai;
+  /* mixin flex end */
+}
+
+@mixin transition {
+}
+
+@mixin list {
+}
+
+@mixin item($q-item, $gap) {
+  flex-basis: calc((100% - #{($q-item - 1)} * #{$gap}) / #{$q-item});
+}
+
+@mixin section($pt, $pb, $bgc: var(--white-bg-cl)) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+  background-color: $bgc;
 }

@@ -4,8 +4,16 @@
 |=================================
 */
 
+.work {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    @include section(0px, 94px);
+    display: block;
+  }
+}
+
 .work-list {
-  @include flex-center(true, false);
+  @include flex(center, null);
 }
 
 .work-list__item {
@@ -17,7 +25,7 @@
 }
 
 .work-list__text {
-  @include flex-center;
+  @include flex(center, center);
   position: absolute;
   bottom: 0;
   width: 100%;

@@ -1,5 +1,5 @@
 .social-list__link {
-  @include flex-center;
+  @include flex(center, center);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -29,7 +29,7 @@
 
 /* social list footer */
 .social-list--gap {
-  display: flex;
+  @include flex(center, null);
   gap: 10px;
 }
 

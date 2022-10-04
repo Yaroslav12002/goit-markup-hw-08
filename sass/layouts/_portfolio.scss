@@ -1,0 +1,6 @@
+.portfolio {
+  @include section(60px, 60px);
+  @media screen and (min-width: $desktop) {
+    @include section(94px, 94px);
+  }
+}

@@ -4,16 +4,38 @@
 |=================================
 */
 
+.features {
+  @include section(60px, 60px);
+  @media screen and (min-width: $desktop) {
+    @include section(94px, 94px);
+  }
+}
+
 .features__list {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .features__item {
-  flex-basis: calc((100% - 30px) / 4);
-}
+  @media screen and (max-width: ($tablet - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: var(--gap);
+    }
+  }
 
-.features__item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (min-width: $tablet) {
+    @include item(2, var(--gap));
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include item(4, var(--gap));
+  }
 }
 
 .features__title {
@@ -23,7 +45,11 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: left;
+
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 .features__text {
@@ -32,10 +58,14 @@
 }
 
 .features__thumb {
-  @include flex-center;
-  height: 120px;
-  width: 270px;
+  @include flex(center, center);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  height: 120px;
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
 
   background-color: var(--btn-bg-cl);
 }

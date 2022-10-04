@@ -1,5 +1,5 @@
 .policy {
-  @include flex-center;
+  @include flex(center, center);
   margin-bottom: 30px;
 }
 
@@ -30,8 +30,11 @@
 }
 
 .policy__link {
-  @include flex-center(false, true);
-  color: var(--blue-cl);
+  @include flex(null, center);
+  @include font(12px, 400, 1.17, 0.03em, var(--blue-cl));
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 400, 1.71, 0.03em, var(--blue-cl));
+  }
   border-bottom: 1px solid var(--blue-cl);
   height: 15px;
 }
@@ -39,4 +42,8 @@
 .policy__text {
   display: block;
   user-select: none;
+  @include font(12px, 400, 1.17, 0.03em, var(--main-cl));
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 400, 1.71, 0.03em, var(--main-cl));
+  }
 }

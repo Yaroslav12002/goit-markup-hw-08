@@ -5,12 +5,29 @@
 */
 
 .team {
-  @include flex-center(true, false);
-  background-color: var(--btn-bg-cl);
+  @include section(60px, 60px, var(--btn-bg-cl));
+  @media screen and (min-width: $desktop) {
+    @include section(94px, 94px, var(--btn-bg-cl));
+  }
+}
+
+.team__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .team__title {
-  font-weight: 500;
+  @include font(28px, 700, 1.18, 0.03em, var(--header-cl));
+  @media screen and (min-width: $desktop) {
+    @include font(36px, 700, 1.17, 0.03em, var(--header-cl));
+    margin-bottom: 50px;
+  }
 }
 
 .team__item {
@@ -18,10 +35,20 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
 
-.team__item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (max-width: ($tablet - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: var(--gap);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include item(2, var(--gap));
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include item(4, var(--gap));
+  }
 }
 
 .team__name {

@@ -1,12 +1,22 @@
 .join {
-  display: flex;
-  gap: 12px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 12px;
+  }
 }
 
 .join__mail {
   padding: 15px;
-  width: 358px;
   height: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+    width: 358px;
+  }
   background-color: transparent;
   font-size: 16px;
   line-height: 1.25;
@@ -24,9 +34,17 @@
 }
 
 .join__button {
-  @include flex-center;
+  @include flex(center, center);
   gap: 10px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 29px;
+  @media screen and (min-width: $tablet) {
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include flex(center, center);
+  }
 
   &:hover,
   &:focus {

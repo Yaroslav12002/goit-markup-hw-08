@@ -5,12 +5,19 @@
 */
 
 .filter {
-  @include flex-center(true, false);
-  margin-bottom: 50px;
-}
+  @include flex(null, null);
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+  @media screen and (min-width: $tablet) {
+    @include flex(center, center);
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__button {
