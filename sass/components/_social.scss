@@ -24,7 +24,14 @@
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+  @media screen and (max-width: ($desktop - 1px)) {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+  }
 }
 
 /* social list footer */
