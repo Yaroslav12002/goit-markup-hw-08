@@ -25,6 +25,7 @@
 }
 
 @mixin item($q-item, $gap) {
+  /* mixin flex item */
   flex-basis: calc((100% - #{($q-item - 1)} * #{$gap}) / #{$q-item});
 }
 
