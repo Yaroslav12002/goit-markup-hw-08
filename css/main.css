@@ -954,7 +954,7 @@ img {
   padding-bottom: 118px;
   background-color: var(--footer-bg-cl);
   text-align: center;
-  background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero-bg.jpg");
+  background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -964,6 +964,31 @@ img {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--footer-bg-cl);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-mobile@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px), screen and (min-width: 768px), screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-tablet.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px), screen and (min-width: 1200px), screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-desktop.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--hero-overlay-cl), var(--hero-overlay-cl)), url("../images/hero/hero-desktop@2x.jpg");
   }
 }
 
