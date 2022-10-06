@@ -32,10 +32,19 @@
 .policy__link {
   @include flex(null, center);
   @include font(12px, 400, 1.17, 0.03em, var(--blue-cl));
+
+  @media screen and (max-width: ($mobile - 1px)) {
+    text-decoration: underline;
+  }
+  @media screen and (min-width: $mobile) {
+    border-bottom: 1px solid var(--blue-cl);
+    text-decoration: none;
+  }
+
   @media screen and (min-width: $desktop) {
     @include font(14px, 400, 1.71, 0.03em, var(--blue-cl));
   }
-  border-bottom: 1px solid var(--blue-cl);
+
   height: 15px;
 }
 

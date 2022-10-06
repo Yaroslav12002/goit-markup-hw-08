@@ -18,19 +18,22 @@
 .mob-menu {
   position: fixed;
   top: 0;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 48px 0px;
   width: 100vw;
   height: 100vh;
   z-index: 10;
 
+  @media screen and (min-width: 321px) {
+    padding: 48px 25px;
+  }
   @media screen and (min-width: $tablet) {
     display: none;
   }
 
   background-color: var(--white-bg-cl);
   overflow-y: scroll;
-
+  transition: opacity var(--animation-effect-duration) var(--animation-effect-cubic),
+    visibility var(--animation-effect-duration) var(--animation-effect-cubic);
   .container {
     position: relative;
     height: 100%;
@@ -65,8 +68,8 @@
 
 .menu-close-btn {
   position: absolute;
-  top: -35px;
-  right: 25px;
+  top: -39px;
+  right: 15px;
   width: 19px;
   height: 19px;
   padding: 0;
@@ -99,6 +102,10 @@
   &:focus {
     color: var(--blue-cl);
   }
+
+  &--current-link {
+    color: var(--blue-cl);
+  }
 }
 
 .mob-contacts__list {
@@ -120,6 +127,7 @@
 }
 .mob-socials__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-socials__item {
@@ -128,10 +136,6 @@
     border-right: 1px solid var(--socials-border-cl);
     margin-right: 10px;
   }
-
-  // &:not(:first-child) {
-  //   margin-left: 10px;
-  // }
 }
 
 .mob-socials__link {
